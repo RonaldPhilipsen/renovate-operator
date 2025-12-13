@@ -25,7 +25,7 @@ jobs:
           private-key: ${{ secrets.RELEASE_APP_SECRET }}
 
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: main
           token: ${{ steps.generate-token.outputs.token }}
@@ -50,7 +50,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: main
           fetch-depth: 0
@@ -119,7 +119,7 @@ jobs:
           private-key: ${{ secrets.RELEASE_APP_SECRET }}
 
       - name: Check out code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           token: ${{ steps.generate-token.outputs.token }}
